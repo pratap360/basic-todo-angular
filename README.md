@@ -64,24 +64,22 @@ Please find below project details.
 Project Task Details
 
 Build a simple Angular application.
-
- Requirements
- 
-- [x] Create a To-Do List app with the following features:
-- [ ] Input box + Add button to add tasks
-- [ ] Each task should be displayed in a list with:
-- [ ] A Complete button (toggle task as done, apply strikethrough for completed tasks)
-- [ ] A Delete button to remove the task
-- [ ] Add a filter bar with three buttons:
-- [ ] All → Show all tasks
-- [ ] Active → Show only incomplete tasks
-- [ ] Completed → Show only completed tasks
-- [ ] Use a Service (TodoService) to handle task operations (add, delete, toggle, filter)
-- [ ] Save tasks in LocalStorage, so they remain after a page refresh
-- [ ] Fetch initial tasks from a mock API (https://jsonplaceholder.typicode.com/todos) using Angular HttpClient
-- [ ] Handle API errors gracefully
+ Requirements
+- [ ] Create a To-Do List app with the following features:
+	- [x] Input box + Add button to add tasks
+	- [ ] Each task should be displayed in a list with:
+		- [x] A Complete button (toggle task as done, apply strikethrough for completed tasks)
+		- [x] A Delete button to remove the task
+	- [ ] Add a filter bar with three buttons:
+		- [ ] All → Show all tasks
+		- [ ] Active → Show only incomplete tasks
+		- [ ] Completed → Show only completed tasks
+	- [ ] Use a Service (TodoService) to handle task operations (add, delete, toggle, filter)
+	- [x] Save tasks in LocalStorage, so they remain after a page refresh
+	- [x] Fetch initial tasks from a mock API (https://jsonplaceholder.typicode.com/todos) using Angular HttpClient
+	- [x] Handle API errors gracefully
 - [ ] Include a README with:
-- [ ] Angular version used
-- [ ] Setup instructions (npm install, ng serve)
+	- [ ] Angular version used
+	- [ ] Setup instructions (npm install, ng serve)
 - [ ] Short explanation of how you handled LocalStorage and services
 - [ ] Please share a GitHub repository (preferred) or zipped Angular project

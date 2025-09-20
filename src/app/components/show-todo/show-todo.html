@@ -1,1 +1,15 @@
-<p>show-todo works!</p>
+<div class="todo-list">
+  <!-- <p>Debug: todoListApi length = {{todoListApi.length}}</p> -->
+  <ul>
+    <li *ngFor="let todo of todoListApi; let i = index" class="todo-item">
+      <span class="todo-number">{{i + 1}}.</span>
+      <span class="todo-title" [class.completed]="todo.completed">{{todo.title}}</span>
+      <div class="todo-buttons">
+        <button (click)="toggleComplete(todo, i)" class="complete-btn">
+          {{todo.completed ? 'Undo' : 'Complete'}}
+        </button>
+        <button (click)="deleteTodo(i)" class="delete-btn">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

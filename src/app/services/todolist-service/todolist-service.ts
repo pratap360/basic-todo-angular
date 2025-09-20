@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable, shareReplay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,16 @@ export class TodolistService {
   todoList$ = new Observable
 
   constructor(){
-    this.getTodoList()
   }
   
-  getTodoList(){
-    this.todoList$ = this.http.get(this.apiUrl)
-    console.log("Getting Data form Api:",this.todoList$);
+  // getTodoList(){
+  //   this.todoList$ = this.http.get(this.apiUrl)
+  //   this.todoList$.subscribe((res:any) => {
+  //     console.log("Getting Data form Api:",res);
+  //   })
+  // }
+  getTodoList(): Observable<any[]>{
+    return this.http.get<any[]>(this.apiUrl)
+    .pipe(map((todos:any) => todos.slice(0,3)))
   }
 }
