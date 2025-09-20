@@ -1,0 +1,19 @@
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.input-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}

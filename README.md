@@ -57,3 +57,31 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+Please find below project details.
+
+Project Task Details
+
+Build a simple Angular application.
+
+ Requirements
+ 
+- [x] Create a To-Do List app with the following features:
+- [ ] Input box + Add button to add tasks
+- [ ] Each task should be displayed in a list with:
+- [ ] A Complete button (toggle task as done, apply strikethrough for completed tasks)
+- [ ] A Delete button to remove the task
+- [ ] Add a filter bar with three buttons:
+- [ ] All → Show all tasks
+- [ ] Active → Show only incomplete tasks
+- [ ] Completed → Show only completed tasks
+- [ ] Use a Service (TodoService) to handle task operations (add, delete, toggle, filter)
+- [ ] Save tasks in LocalStorage, so they remain after a page refresh
+- [ ] Fetch initial tasks from a mock API (https://jsonplaceholder.typicode.com/todos) using Angular HttpClient
+- [ ] Handle API errors gracefully
+- [ ] Include a README with:
+- [ ] Angular version used
+- [ ] Setup instructions (npm install, ng serve)
+- [ ] Short explanation of how you handled LocalStorage and services
+- [ ] Please share a GitHub repository (preferred) or zipped Angular project

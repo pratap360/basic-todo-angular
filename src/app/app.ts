@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CreateTodos } from './components/create-todos/create-todos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CreateTodos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
