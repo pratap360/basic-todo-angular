@@ -17,3 +17,14 @@
     margin-top: 20px;
     gap: 10px;
 }
+
+.add-btn {
+  background-color: #285ba7;
+  color: white;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

@@ -1,15 +1,40 @@
 <div class="todo-list">
   <!-- <p>Debug: todoListApi length = {{todoListApi.length}}</p> -->
+  <div class="filter-bar">
+        <label for="filter">Filter Todo</label>
+        <select name="Filter" id="filter" [(ngModel)]="selectedFilter">
+            <option value="All">All</option>
+            <option value="Active">Active</option>
+            <option value="Completed">Completed</option>
+        </select>
+    </div>
+  <ul>
+    <li *ngFor="let task of tasks | taskFilter:selectedFilter; let i = index" class="todo-item">
+      <span class="todo-number">{{i + 1}}.</span>
+      <span class="todo-title" [class.completed]="task.isDone">{{task.todoName}}</span>
+      <div class="todo-buttons">
+        <button (click)="toggleDone(i)" class="complete-btn">
+          {{task.isDone ? 'Undo' : 'Complete'}}
+        </button>
+        <button (click)="deleteTask(i)" class="delete-btn">Delete</button>
+      </div>
+    </li>
+  </ul>
+
+  <div *ngIf="tasks.length === 0">
+  <hr>
+  <h3>Examples Todos from API</h3>
   <ul>
     <li *ngFor="let todo of todoListApi; let i = index" class="todo-item">
       <span class="todo-number">{{i + 1}}.</span>
       <span class="todo-title" [class.completed]="todo.completed">{{todo.title}}</span>
       <div class="todo-buttons">
-        <button (click)="toggleComplete(todo, i)" class="complete-btn">
+        <button (click)="toggleCompleteApi(todo, i)" class="complete-btn">
           {{todo.completed ? 'Undo' : 'Complete'}}
         </button>
-        <button (click)="deleteTodo(i)" class="delete-btn">Delete</button>
+        <button (click)="deleteTodoApi(i)" class="delete-btn">Delete</button>
       </div>
     </li>
   </ul>
+  </div>
 </div>
